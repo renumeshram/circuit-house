@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking - Room Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <!-- Header Section -->
+        <header class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="Hotel Booking Logo">
+            </div>
+            <div class="user-profile">
+                <img src="user-avatar.png" alt="User Avatar">
+                <span>John Doe</span>
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <main>
+            <section class="banner">
+                <h1>CIRCUIT HOUSE</h1>
+                <p>Book your rooms from the Exiquite site</p>
+            </section>
+
+            <!-- Room Filter Section -->
+            <section class="room-filter">
+                <h2>Rooms</h2>
+                <div class="filters">
+                    <button class="filter-btn" data-filter="all">All Rooms</button>
+                    <button class="filter-btn" data-filter="available">Available Rooms</button>
+                    <button class="filter-btn" data-filter="booked">Booked Rooms</button>
+                    <button class="filter-btn" data-filter="reserved">Reserved</button>
+                </div>
+
+                <div class="room-cards" id="room-cards">
+                    <!-- Room cards will be populated here -->
+                </div>
+            </section>
+
+            <!-- Modal for booking -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Room Booking Form</h2>
+        <form id="bookingForm">
+            <!-- Room ID (hidden) -->
+            <input type="hidden" id="roomId" name="roomId">
+
+            <!-- Full Name -->
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+
+            <!-- Email Address -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <!-- Number of Guests -->
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+            <!-- Check-in Date -->
+            <label for="checkinDate">Check-in Date</label>
+            <input type="date" id="checkinDate" name="checkinDate" required>
+
+            <!-- Check-out Date -->
+            <label for="checkoutDate">Check-out Date</label>
+            <input type="date" id="checkoutDate" name="checkoutDate" required>
+
+            <!-- Payment Button -->
+            <button type="button" id="paymentButton" disabled>Proceed to Payment</button>
+        </form>
+    </div>
+</div>
+
+            <!-- Room Availability Section
+            <section class="room-availability">
+                <h2>Rooms Availability for Next Week</h2>
+                <div id="room-availability">
+                   // This section will be populated by JavaScript
+                </div>
+                <div id="dates-display">
+                    Check-in and Check-out dates will be displayed here
+                </div>
+            </section>             -->
+            <section class="week-room-search">
+                <h2>Check Room Availability for Next Week</h2>
+                <div id="room-search">
+                    <label for="checkIn">Check-In Date</label>
+                    <input type="date" id="checkin" required>
+
+                    <label for="checkOut">Check-Out Date</label>
+                    <input type="date" id="checkout" required>
+
+                    <button id="search-rooms">Search</button>
+                </div>                
+            </section>
+
+            <!-- Room Availability Section -->
+            <section class="room-availability">
+                <h2>Rooms Availability for Next Week</h2>
+                <div id="room-availability">
+                    <!-- This section will be populated by JavaScript -->
+                </div>
+                <div id="dates-display">
+                    <!-- Check-in and Check-out dates will be displayed here -->
+                </div>
+            </section>
+
+            <!-- Map Section -->
+            <section class="map">
+                <a href="https://www.google.com/maps/place/New+Circuit+House+Dantewada/@18.8955275,81.3442193,4317m/data=!3m1!1e3!4m7!3m6!1s0x3a31b721ca249db5:0x112688ffec16f0b5!4b1!8m2!3d18.8995494!4d81.3489575!16s%2Fg%2F11gr1h7j5c?entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D"><img src="map.png" alt="Map Placeholder"></a>
+            </section>
+        </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>circuithouse@yahoo.com</p>
+                <p>+91 9999123750</p>
+                <p>+91 2222415897</p>
+                <div class="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="footer-logo">
+               <br> <img src="gov.jpeg" alt="Circuit House Logo">
+                <p>© All Rights Reserved to Our dantewada circuit house 2017</p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="script1.js"></script>
+        
+    </div>
+</body>
+</html>
